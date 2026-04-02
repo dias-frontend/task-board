@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  transition: 0.3s;
+}
+
+
+body.dark {
+  background: #1e293b;
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.controls, .search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 250px;
+}
+
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+
+.board {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.column {
+  background: white;
+  padding: 15px;
+  width: 250px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+body.dark .column {
+  background: #334155;
+}
+
+.placeholder {
+  min-height: 200px;
+}
+
+
+.item {
+  background: #f9fafb;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: grab;
+  position: relative;
+  transition: 0.2s;
+  animation: fadeIn 0.3s ease;
+}
+
+body.dark .item {
+  background: #475569;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.delete {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  color: red;
+  cursor: pointer;
+}
+
+
+.hovered {
+  background: #c7d2fe;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 180px;
+  }
+}

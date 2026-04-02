@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-bar">
+    <h1>📋 Task Board</h1>
+    <button id="themeToggle">🌙</button>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="taskInput" placeholder="Введите задачу...">
+    <button id="addBtn">Добавить</button>
+  </div>
+
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="🔍 Поиск задач...">
+  </div>
+
+  <div class="board">
+    <div class="column" data-status="start">
+      <h3>Начать</h3>
+      <div class="placeholder"></div>
+    </div>
+
+    <div class="column" data-status="progress">
+      <h3>В процессе</h3>
+      <div class="placeholder"></div>
+    </div>
+
+    <div class="column" data-status="done">
+      <h3>Готово</h3>
+      <div class="placeholder"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
